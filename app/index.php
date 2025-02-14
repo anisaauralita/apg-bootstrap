@@ -33,22 +33,22 @@
 			<ul class="navbar-nav d-sm-none">
 				<li class="nav-item">
 					<a class="nav-link text-white" href="?hal=dashboard">
-					<i class="bi bi-speedometer"></i>Dashboard 
+					<i class="bi bi-speedometer"></i> Dashboard 
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link text-white" href="?hal=pegawai">
-						<i class="oi oi-person"></i>Data Pegawai 
+					<i class="bi bi-people"></i> Data Pegawai 
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link text-white" href="?hal=jabatan">
-						<i class="oi oi-sort-descending"></i>Data Jabatan 
+					<i class="bi bi-clipboard-data"></i> Data Jabatan 
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link text-white" href="logout.php">
-						<i class="oi oi-account-logout"></i>Keluar 
+					<i class="bi bi-box-arrow-right"></i> Keluar 
 					</a>
 				</li>
 			</ul>
@@ -68,24 +68,24 @@
 						</a>
 					<li class="list-group item bg-dark">
 						<a class="nav-link text-white" href="?hal=jabatan">
-							<i class="oi oi-sort-descending"></i>Data Jabatan
+						<i class="bi bi-clipboard-data"></i> Data Jabatan
 						</a>
 					<li class="list-group item bg-dark">
 						<a class="nav-link text-white" href="logout.php">
-							<i class="oi oi-account-logout"></i>Keluar
+						<i class="bi bi-box-arrow-right"></i> Keluar
 						</a>
 					</li>
 				</ul>
 			</nav>
 			<div class="col-md-10 col-sm-9 offset-md-2 offset-sm-2 mb-3">
 				<section>
-					<?php //include "konten.php"; ?>
+					<?php include "konten.php"; ?>
 				</section>
 			</div>
 		</div>
 	</div>
 	<div class="bg-light fixed-bottom">
-		<p class="m-2 text-center text-muted">Copyright &copy: Rohi Abdulloh</p>
+		<p class="m-2 text-center text-muted">Made with by ❤️ Masipnu | &copy 2025</p>
 	</div>
 <!-- Script Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -94,7 +94,8 @@
 <script src="plugin/DataTables/js/dataTables. bootstrap4. min.js"></script>
 
 <script>
-$(function() { $('.table'). DataTable();
+$(function() {
+ $('.table').DataTable();
 });
 </script>
 

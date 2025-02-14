@@ -14,7 +14,7 @@
     <div class="col-sm-6 mb-3">
         <ul class="list-group">
             <li class="list-group-item text-danger">
-                <i class="io io-person display-3"></i>
+                <i class="bi bi-people display-3"></i>
                     <span class="display-3 float-right">
                         <?=$jml_pegawai ?>
                     </span>
@@ -27,7 +27,7 @@
     <div class="col-sm-6 mb-3">
         <ul class="list-group">
             <li class="list-group-item text-success">
-                <i class="oi oi-sort-descending display-3"></i>
+                <i class="bi bi-clipboard-data display-3"></i>
                 <span class="display-3 float-right">
                     <?=$jml_jabatan ?>
                 </span>

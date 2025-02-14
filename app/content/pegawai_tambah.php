@@ -1,61 +1,86 @@
 <?php
-if(!defined('INDEX')) die();
+    if(!defined('INDEX')) die("");
 ?>
 
-<h2 class="judul">Tambah Pegawai</h2>
-<form action="?hal=pegawai_insert" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <label for="foto">Foto</label>
-        <div class="input">
-            <input type="file" name="foto" id="foto">
+<h4 class="mt-2">Tambah Pegawai</h4>
+<hr>
+<form class="mb-5" method="post" action="?hal=pegawai_insert" enctype="multipart/form-data">
+    
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Foto</label>
+        <div class="col-sm-4">
+            <div class="custom-file">
+                <label for="foto" class="custom-file-label"></label>
+                <input class="custom-file-input" type="file" id="foto" name="foto">
+            </div>
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="nama">Nama</label>
-        <div class="input">
-            <input type="text" name="nama" id="nama">
+    <div class="form-group row">
+        <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+        <div class="col-sm-4">
+            <input class="form-control" type="text" id="nama" name="nama">
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="jk">Jenis Kelamin</label>
-        <input type="radio" name="jk" id="jk" value="L"> Laki-laki
-        <input type="radio" name="jk" id="jk" value="P"> Perempuan
-    </div>
-
-    <div class="form-group">
-        <label for="tanggal">Tanggal</label>
-        <div class="input">
-            <input type="date" name="tanggal" id="tanggal">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
+        <div class="col-sm-4">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input class="custom-control-input" type="radio" id="jkl" name="jk" value="L">
+                <label class="custom-control-label" for="jkl">Laki-laki</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input class="custom-control-input" type="radio" id="jkp" name="jk" value="P">
+                <label class="custom-control-label" for="jkp">Perempuan</label>
+            </div>
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="jabatan">Jabatan</label>
-        <div class="input">
-            <select name="jabatan" id="jabatan">
-                <option value=""> - Pilih Jabatan - </option>
-<?php
-$query = "SELECT * FROM jabatan";
-$result = mysqli_query($con,$query);
-while($data = mysqli_fetch_assoc($result)){
-    echo "<option value='$data[id_jabatan]'> $data[nama_jabatan] </option>";
-}
-?>
+    <div class="form-group row">
+        <label for="tanggal" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+        <div class="col-sm-2">
+            <input class="form-control" type="text" id="tanggal" name="tanggal">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+        <div class="col-sm-4">
+            <select class="custom-select" id="jabatan" name="jabatan">
+                <option value="">Pilih Jabatan</option>
+                <?php
+                    $queryjabatan = mysqli_query($con, "SELECT * FROM jabatan");
+                    while($j = mysqli_fetch_array($queryjabatan)){
+                        echo "<option value='{$j['id_jabatan']}'>{$j['nama_jabatan']}</option>";
+                    }
+                ?>
             </select>
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="keterangan">Keterangan</label>
-        <div class="input">
-            <textarea name="keterangan" id="keterangan" style="width:100%" rows="5" ></textarea>
+    <div class="form-group row">
+        <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
+        <div class="col-sm-8">
+            <textarea class="form-control" id="keterangan" name="keterangan"></textarea>
         </div>
     </div>
 
-    <div class="form-group">
-        <input type="submit" value="Simpan" class="tombol simpan">
-        <input type="reset" value="Batal" class="tombol reset">
-    </div>
+    <button type="submit" class="btn btn-info">Simpan</button>
+    <button type="reset" class="btn btn-warning">Reset</button>
+    <a href="?hal=pegawai" class="btn btn-danger">Batal</a>
 </form>
+
+<link href="plugin/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+<link href="plugin/summernote/summernote-bs4.css" rel="stylesheet">
+
+<script src="plugin/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="plugin/summernote/summernote-bs4.min.js"></script>
+
+<script>
+    $(function(){
+        $('.table').DataTable();
+        $('#tanggal').datepicker();
+        $('#keterangan').summernote();
+    });
+</script>
