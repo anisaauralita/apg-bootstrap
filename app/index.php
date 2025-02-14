@@ -22,6 +22,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link href="plugin/DataTables/css/dataTables. bootstrap4.min.css" rel="stylesheet">
+	<link href="plugin/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+	<link href="plugin/summernote/summernote-bs4.css" rel="stylesheet">
 </head>
 <body class="h-100">
 	<nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-info">
@@ -92,13 +94,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 <script src="plugin/DataTables/js/jquery. dataTables. min.js"></script>
 <script src="plugin/DataTables/js/dataTables. bootstrap4. min.js"></script>
+<script src="plugin/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="plugin/summernote/summernote-bs4.min.js"></script>
 
 <script>
-$(function() {
- $('.table').DataTable();
-});
+    $(function(){
+        $('.table').DataTable();
+        $('#tanggal').datepicker();
+        $('#keterangan').summernote();
+    });
 </script>
-
 </body>
 </html>
 
