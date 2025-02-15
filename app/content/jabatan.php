@@ -27,7 +27,7 @@ if(!defined('INDEX')) die("");
                     <td><?= $no ?></td>
                     <td><?= htmlspecialchars($data['nama_jabatan']) ?></td>
                     <td>
-                        <a class="btn btn-sm btn-info" href="?hal=jabatan_edit&id=<?= $data['id_jabatan'] ?>">
+                        <a class="btn btn-sm btn-warning" href="?hal=jabatan_edit&id=<?= $data['id_jabatan'] ?>">
                             <i class="bi bi-pencil"></i> Edit
                         </a>
                         <a class="btn btn-sm btn-danger" href="?hal=jabatan_hapus&id=<?= $data['id_jabatan'] ?>" onclick="return confirm('Yakin ingin menghapus data ini?')">

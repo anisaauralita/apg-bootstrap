@@ -87,7 +87,7 @@
 		</div>
 	</div>
 	<div class="bg-light fixed-bottom">
-		<p class="m-2 text-center text-muted">Made with by ❤️ Masipnu | &copy 2025</p>
+		<p class="m-2 text-center text-muted">Made with ❤️ by Masipnu | &copy 2025</p>
 	</div>
 <!-- Script Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

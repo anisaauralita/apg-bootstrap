@@ -62,14 +62,14 @@ if(!defined('INDEX')) die("");
     <div class="form-group row">
         <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
         <div class="col-sm-8">
-            <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
+            <textarea class="form-control" id="keterangan" name="keterangan" rows="3" required></textarea>
         </div>
     </div>
 
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-info"><i class="oi oi-task"></i> Simpan</button>
-            <button type="reset" class="btn btn-warning"><i class="oi oi-x"></i> Batal</button>
+            <button type="submit" class="btn btn-success"><i class="bi bi-save"></i> Simpan</button>
+            <a href="?hal=pegawai" class="btn btn-danger"><i class="bi bi-arrow-left"></i> Batal</a>
         </div>
     </div>
 </form>

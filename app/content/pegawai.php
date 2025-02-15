@@ -44,7 +44,7 @@ if(!defined('INDEX')) die();
                                 <td><?= $data['nama_jabatan'] ?></td>
                                 <td><?= $data['keterangan'] ?></td>
                                 <td>
-                                <a class="btn btn-sm btn-info" href="?hal=pegawai_edit&id=<?= $data['id_pegawai'] ?>">
+                                <a class="btn btn-sm btn-warning" href="?hal=pegawai_edit&id=<?= $data['id_pegawai'] ?>">
                                 <i class="bi bi-pencil"></i> Edit
                                 </a>
                                 <a class="btn btn-sm btn-danger" href="?hal=pegawai_hapus&id=<?= $data['id_pegawai'] ?>" onclick="return confirm('Yakin ingin menghapus data ini?')">
